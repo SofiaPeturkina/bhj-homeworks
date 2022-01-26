@@ -69,7 +69,6 @@ class Autocomplete {
 
   getMatches( text ) {
     let result = [ ];
-    
     for (let i = 0; i < this.input.options.length; i++) {
       if (this.input.options[i].text.includes(this.searchInput.value)) {
         let checklist = {
@@ -79,13 +78,12 @@ class Autocomplete {
         result.push(checklist);
       }
     }
-    return [
-      {
-        text: 'Чубакка',
-        value: '1'
-      }
-    ];
+      return result;
   }
 }
 
 new Autocomplete( document.querySelector( '.autocomplete' ));
+
+
+
+
